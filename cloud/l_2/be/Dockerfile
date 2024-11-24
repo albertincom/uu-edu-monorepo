@@ -21,6 +21,7 @@ WORKDIR /app
 
 # Copy the binary from the builder stage
 COPY --from=builder /app/main .
+COPY --from=builder /app/static/ ./static
 
 # Ensure the binary has executable permissions
 RUN chmod +x main
