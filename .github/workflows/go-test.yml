@@ -1,4 +1,4 @@
-name: Go Test Pipeline
+name: Go Test and Simulate Deployment Pipeline
 
 on:
   push:
@@ -29,3 +29,7 @@ jobs:
         working-directory: cloud/l_3/be
         run: |
           go test ./... -v
+
+      - name: Simulate Deployment
+        if: success()
+        run: echo "Deployed"
