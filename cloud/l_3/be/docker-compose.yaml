@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+  uu_edu_monorepo_cloud_l2:
+    image: sasha192bunin/uu_edu_monorepo_cloud_l2:0.1.0-rc4
+    ports:
+      - 8500:8080
